@@ -20,4 +20,11 @@ public class EchoClient
         pwrite.flush();  
         receiveMessage = receiveRead.readLine();
         System.out.println("Server: " + receiveMessage); 
+if((sendMessage.equalsIgnoreCase("ok"))||(receiveMessage.equalsIgnoreCase("ok")))
+        {
+       		System.out.println("Client exiting..."); 
+		System.exit(0);
+			
+        } 
+      }while(true) ;   
 }}
