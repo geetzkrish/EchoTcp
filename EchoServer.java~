@@ -16,3 +16,11 @@ public class EchoServer
       // receiving from server ( receiveRead  object)
       InputStream istream = sock.getInputStream();
       BufferedReader receiveRead = new BufferedReader(new InputStreamReader(istream));
+      String receiveMessage, sendMessage;               
+      do
+      {
+      	receiveMessage = receiveRead.readLine();
+      	System.out.println("Received: " + receiveMessage); 
+      	sendMessage = new String(receiveMessage);
+      	pwrite.println(sendMessage); 
+      	pwrite.flush(); 
