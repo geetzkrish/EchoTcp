@@ -12,4 +12,12 @@ public class EchoClient
      BufferedReader receiveRead = new BufferedReader(new InputStreamReader(istream));
      System.out.println("Client ready for chatting, type 'ok' to exit");
      String receiveMessage, sendMessage;   
+ do
+     {
+      	System.out.print("Client: ");
+        sendMessage = keyRead.readLine();   
+        pwrite.println(sendMessage);
+        pwrite.flush();  
+        receiveMessage = receiveRead.readLine();
+        System.out.println("Server: " + receiveMessage); 
 }}
